@@ -4,38 +4,75 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="landpagina.css">
-    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Snapchat</title>
 </head>
 <body>
-    <img style="" src="">
-    <h1>Kies</h1>
-    <div style="display: flex; justify-content: space-around; flex-wrap:wrap">
-        <div class="card">
-            <div class="card-front"></div>
-            <div class="card-back">
-                <h3><br>Voeg me toe op Snapchat: <span>[SNAP]</span></h3>
+    <header style='background-color: yellow; padding-bottom: 0px;'>
+        <img src="https://variety.com/wp-content/uploads/2017/11/snapchat-logo.jpg" style="margin-left: auto; margin-right: auto; display: block; height: 75px; margin-bottom: -20px;">
+        <h1>Snapchat seks</h1>
+    </header>
+    <main>
+        <div style="display: flex; justify-content: center;">
+            <p id="1" class="blob" style="width: 200px;">Wat voor borsten?</p>
+            <p id="2" class="blob" style="width: 15px;">2</p>
+            <p id="3" class="blob" style="width: 15px;">3</p>
+            <p id="4" class="blob" style="width: 15px;">4</p>
+        </div>
+        <div id="choose">
+            <div style="display: flex; justify-content: space-around; flex-wrap:wrap">
+                <div class="card" id="card1" onclick='flipcard("card1")'>
+                    <div class="card-front"></div>
+                    <div class="card-back">
+                        <h3><br>Voeg me toe op Snapchat: <span>[SNAP]</span></h3>
+                    </div>
+                </div>
+                <div class="card" id="card2" onclick='flipcard("card2")'>
+                    <div class="card-front"></div>
+                    <div class="card-back">
+                        <h3><br>Voeg me toe op Snapchat: <span>[SNAP]</span></h3>
+                    </div>
+                </div>
+                <div class="card" id="card3" onclick='flipcard("card3")'>
+                    <div class="card-front"></div>
+                    <div class="card-back">
+                        <h3><br>Voeg me toe op Snapchat: <span>[SNAP]</span></h3>
+                    </div>
+                </div>
+                <div class="card" id="card4" onclick='flipcard("card4")'>
+                    <div class="card-front"></div>
+                    <div class="card-back">
+                        <h3><br>Voeg me toe op Snapchat: <span>[SNAP]</span></h3>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="card">
-            <div class="card-front"></div>
-            <div class="card-back">
-                <h3><br>Voeg me toe op Snapchat: <span>[SNAP]</span></h3>
-            </div>
+        <div id="q1">
+            <button onclick='changeScreen("#q1", "#choose")'>Grote</button>
+            <button onclick='changeScreen("#q1", "#choose")'>Middel</button>
+            <button onclick='changeScreen("#q1", "#choose")'>Kleine</button>
+            <button onclick='changeScreen("#q1", "#choose")'>Maakt niet uit</button>
         </div>
-    </div>
-    <div style="display: flex; justify-content: space-around; flex-wrap:wrap">
-        <div class="card">
-            <div class="card-front"></div>
-            <div class="card-back">
-                <h3><br>Voeg me toe op Snapchat: <span>[SNAP]</span></h3>
-            </div>
-        </div>
-        <div class="card">
-            <div class="card-front"></div>
-            <div class="card-back">
-                <h3><br>Voeg me toe op Snapchat: <span>[SNAP]</span></h3>
-            </div>
-        </div>
-    </div>
+    </main>
+    <footer>
+
+    </footer>
 </body>
+<script defer>
+    $("#choose").hide(0);
+    function changeScreen(from, to) {
+        $("#1").text("1").width(15);
+        $("#2").text("kies").width(150);
+        $(from).fadeOut(500);
+        $(to).delay(500).fadeIn(500);
+        
+    }
+    function flipcard(card) {
+        if (document.getElementById(card).classList.contains('cardClicked')) {
+            document.getElementById(card).classList.remove('cardClicked');
+        } else {
+            document.getElementById(card).classList.add('cardClicked');
+        }
+    }
+</script>
 </html>
