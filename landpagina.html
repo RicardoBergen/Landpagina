@@ -14,44 +14,60 @@
     </header>
     <main>
         <div style="display: flex; justify-content: center;">
-            <p id="1" class="blob" style="width: 200px;">Wat voor borsten?</p>
+            <p id="1" class="blob" style="width: 225px;">Ben je een man of vrouw?</p>
             <p id="2" class="blob" style="width: 15px;">2</p>
             <p id="3" class="blob" style="width: 15px;">3</p>
             <p id="4" class="blob" style="width: 15px;">4</p>
         </div>
-        <div id="choose">
+        <div id="q1">
+            <div style="position: absolute; left: 50%; top: 50%; transform: translateX(-50%);">
+                <button onclick='changeScreen("#q1", "#q2", 1)'>Man</button>
+                <button onclick='changeScreen("#q1", "#q2", 1)'>Vrouw</button>
+            </div>
+        </div>
+        <div id="q2">
+            <div style="position: absolute; left: 50%; top: 50%; transform: translateX(-50%);">
+                <button onclick='changeScreen("#q2", "#q3", 2)'>Grote</button>
+                <button onclick='changeScreen("#q2", "#q3", 2)'>Middel</button>
+                <button onclick='changeScreen("#q2", "#q3", 2)'>Kleine</button>
+                <button onclick='changeScreen("#q2", "#q3", 2)'>Maakt niet uit</button>
+            </div>
+        </div>
+        <div id="q3">
+            <div style="position: absolute; left: 50%; top: 50%; transform: translateX(-50%);">
+                <button onclick='changeScreen("#q3", "#q4", 3)'>1 - 5 keer per week</button>
+                <button onclick='changeScreen("#q3", "#q4", 3)'>5 - 10 keer per dag</button>
+                <button onclick='changeScreen("#q3", "#q4", 3)'>Altijd</button>
+                <button onclick='changeScreen("#q3", "#q4", 3)'>Maakt niet uit</button>
+            </div>
+        </div>
+        <div id="q4">
             <div style="display: flex; justify-content: space-around; flex-wrap:wrap">
                 <div class="card" id="card1" onclick='flipcard("card1")'>
                     <div class="card-front"></div>
                     <div class="card-back">
-                        <h3><br>Voeg me toe op Snapchat: <span>[SNAP]</span></h3>
+                        <h3>Voeg me toe op Snapchat: <span>[SNAP]</span></h3>
                     </div>
                 </div>
                 <div class="card" id="card2" onclick='flipcard("card2")'>
                     <div class="card-front"></div>
                     <div class="card-back">
-                        <h3><br>Voeg me toe op Snapchat: <span>[SNAP]</span></h3>
+                        <h3>Voeg me toe op Snapchat: <span>[SNAP]</span></h3>
                     </div>
                 </div>
                 <div class="card" id="card3" onclick='flipcard("card3")'>
                     <div class="card-front"></div>
                     <div class="card-back">
-                        <h3><br>Voeg me toe op Snapchat: <span>[SNAP]</span></h3>
+                        <h3>Voeg me toe op Snapchat: <span>[SNAP]</span></h3>
                     </div>
                 </div>
                 <div class="card" id="card4" onclick='flipcard("card4")'>
                     <div class="card-front"></div>
                     <div class="card-back">
-                        <h3><br>Voeg me toe op Snapchat: <span>[SNAP]</span></h3>
+                        <h3>Voeg me toe op Snapchat: <span>[SNAP]</span></h3>
                     </div>
                 </div>
             </div>
-        </div>
-        <div id="q1">
-            <button onclick='changeScreen("#q1", "#choose")'>Grote</button>
-            <button onclick='changeScreen("#q1", "#choose")'>Middel</button>
-            <button onclick='changeScreen("#q1", "#choose")'>Kleine</button>
-            <button onclick='changeScreen("#q1", "#choose")'>Maakt niet uit</button>
         </div>
     </main>
     <footer>
@@ -59,13 +75,26 @@
     </footer>
 </body>
 <script defer>
-    $("#choose").hide(0);
-    function changeScreen(from, to) {
-        $("#1").text("1").width(15);
-        $("#2").text("kies").width(150);
+    $("#q2").hide(0);
+    $("#q3").hide(0);
+    $("#q4").hide(0);
+    function changeScreen(from, to, number) {
         $(from).fadeOut(500);
         $(to).delay(500).fadeIn(500);
-        
+        switch(number) {
+            case 1:
+                $("#1").text("1").animate({width: '15px'}, 750);
+                $("#2").text("Wat voor borsten wil je?").animate({width: '225px'}, 750);
+                break;
+            case 2:
+                $("#2").text("2").animate({width: '15px'}, 750);
+                $("#3").text("Hoevaak wil je sex?").animate({width: '225px'}, 750);
+                break;
+            case 3:
+                $("#3").text("3").animate({width: '15px'}, 750);
+                $("#4").text("Wie wil je neuken?").animate({width: '225px'}, 750);
+                break;
+        }
     }
     function flipcard(card) {
         if (document.getElementById(card).classList.contains('cardClicked')) {
