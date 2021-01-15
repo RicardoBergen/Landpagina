@@ -23,6 +23,7 @@ button {
     color: white;
     margin: 5px;
     transition: 0.5s;
+    outline: none;
 }
 .logo {
     margin-left: auto;
@@ -102,7 +103,6 @@ h1 {
 }
 
 .card-front {
-    border: 2px solid black;
     border-radius: 20px;
     height: 100%;
     width: 100%;
@@ -117,9 +117,6 @@ h1 {
     backface-visibility: hidden;
     transform: rotateY(0deg);
     transition: .5s;
-}
-.card-front:hover {
-    border: 2px solid yellow;
 }
 .card-back {
     border-radius: 20px;
