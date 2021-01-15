@@ -1,3 +1,9 @@
+<?php
+    $snap1 = "SNAP1";
+    $snap2 = "SNAP2";
+    $snap3 = "SNAP3";
+    $snap4 = "SNAP4";
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,12 +12,12 @@
     <link rel="stylesheet" href="landpagina.css">
     <link rel="stylesheet" type="text/css" media="only screen and (max-device-width: 480px)" href="small.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <title>Snapchat</title>
+    <title>Snapchat Sex</title>
 </head>
 <body>
     <header>
         <img src="https://variety.com/wp-content/uploads/2017/11/snapchat-logo.jpg" class="logo">
-        <h1>Snapchat seks</h1>
+        <h1>Snapchat Sex</h1>
     </header>
     <main>
         <div style="display: flex; justify-content: center;">
@@ -47,25 +53,25 @@
                 <div class="card" id="card1" onclick='flipcard("card1")'>
                     <div class="card-front"></div>
                     <div class="card-back">
-                        <h3>Voeg me toe op Snapchat: <span>[SNAP]</span></h3>
+                        <h3>Voeg me toe op Snapchat: <span><?php echo $snap1 ?></span></h3>
                     </div>
                 </div>
                 <div class="card" id="card2" onclick='flipcard("card2")'>
                     <div class="card-front"></div>
                     <div class="card-back">
-                        <h3>Voeg me toe op Snapchat: <span>[SNAP]</span></h3>
+                        <h3>Voeg me toe op Snapchat: <span><?php echo $snap2 ?></span></h3>
                     </div>
                 </div>
                 <div class="card" id="card3" onclick='flipcard("card3")'>
                     <div class="card-front"></div>
                     <div class="card-back">
-                        <h3>Voeg me toe op Snapchat: <span>[SNAP]</span></h3>
+                        <h3>Voeg me toe op Snapchat: <span><?php echo $snap3 ?></span></h3>
                     </div>
                 </div>
                 <div class="card" id="card4" onclick='flipcard("card4")'>
                     <div class="card-front"></div>
                     <div class="card-back">
-                        <h3>Voeg me toe op Snapchat: <span>[SNAP]</span></h3>
+                        <h3>Voeg me toe op Snapchat: <span><?php echo $snap4 ?></span></h3>
                     </div>
                 </div>
             </div>
