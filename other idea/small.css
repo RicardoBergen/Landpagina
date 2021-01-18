@@ -1,5 +1,4 @@
 @import "https://fonts.googleapis.com/css?family=Josefin+Sans:400,700";
-
 .center {
     margin-top: 10px;
     align-self: flex-end;
@@ -12,20 +11,25 @@
     position: relative;
 }
 #q1 , #q2, #q3, #q4{
-  position: absolute; left: 50%; top: 32%; transform: translateX(-50%);
-  position: absolute; left: 50%; top: 38%; transform: translateX(-50%);
-  margin-top: 10px;
+    position: absolute;
+    left: 50%;
+    top: 38%;
+    transform: translateX(-50%);
+    margin-top: 10px;
 }
 button {
     float: left;
 }
 /* Temp oplossing */
 .blob{
-  visibility: hidden;
+    visibility: hidden;
 }
 .thisOne{
- visibility: visible;
- position: absolute; left: 50%; top: 25%; transform: translateX(-50%);
+    visibility: visible;
+    position: absolute;
+    left: 50%;
+    top: 25%;
+    transform: translateX(-50%);
 }
 main {
     margin: 5%;

@@ -47,25 +47,25 @@
                 <div class="card" id="card1" onclick='flipcard("card1")'>
                     <div class="card-front"></div>
                     <div class="card-back">
-                        <h3>Voeg me toe op Snapchat: <span>[SNAP]</span></h3>
+                        <h3>Voeg haar toe op Snapchat: <span>[SNAP]</span></h3>
                     </div>
                 </div>
                 <div class="card" id="card2" onclick='flipcard("card2")'>
                     <div class="card-front"></div>
                     <div class="card-back">
-                        <h3>Voeg me toe op Snapchat: <span>[SNAP]</span></h3>
+                        <h3>Voeg haar toe op Snapchat: <span>[SNAP]</span></h3>
                     </div>
                 </div>
                 <div class="card" id="card3" onclick='flipcard("card3")'>
                     <div class="card-front"></div>
                     <div class="card-back">
-                        <h3>Voeg me toe op Snapchat: <span>[SNAP]</span></h3>
+                        <h3>Voeg haar toe op Snapchat: <span>[SNAP]</span></h3>
                     </div>
                 </div>
                 <div class="card" id="card4" onclick='flipcard("card4")'>
                     <div class="card-front"></div>
                     <div class="card-back">
-                        <h3>Voeg me toe op Snapchat: <span>[SNAP]</span></h3>
+                        <h3>Voeg haar toe op Snapchat: <span>[SNAP]</span></h3>
                     </div>
                 </div>
             </div>
