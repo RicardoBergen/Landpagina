@@ -22,7 +22,7 @@
     </header>
     <main>
         <div style="display: flex; justify-content: center;">
-            <p id="1" class="blob thisOne" style="width: 225px;"><?php echo $vraag1; ?></p>
+            <p id="1" class="blob thisOne" style="width: auto;"><?php echo $vraag1; ?></p>
             <p id="2" class="blob" style="width: 15px;">2</p>
             <p id="3" class="blob" style="width: 15px;">3</p>
             <p id="4" class="blob" style="width: 15px;">4</p>
@@ -100,33 +100,19 @@
     function changeScreen(from, to, number) {
         $(from).fadeOut(500);
         $(to).delay(500).fadeIn(500);
-        if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-            switch(number) {
-                case 1:
-                    $("#1").text(vraag2).animate({width: '225px'}, 750);
-                    break;
-                case 2:
-                    $("#1").text(vraag3).animate({width: '225px'}, 750);
-                    break;
-                case 3:
-                    $("#1").text(vraag4).animate({width: '225px'}, 750);
-                    break;
-            }
-        }else{
-            switch(number) {
-                case 1:
-                    $("#1").text("1").animate({width: '15px'}, 750);
-                    $("#2").text(vraag2).animate({width: '225px'}, 750);
-                    break;
-                case 2:
-                    $("#2").text("2").animate({width: '15px'}, 750);
-                    $("#3").text(vraag3).animate({width: '225px'}, 750);
-                    break;
-                case 3:
-                    $("#3").text("3").animate({width: '15px'}, 750);
-                    $("#4").text(vraag4).animate({width: '225px'}, 750);
-                    break;
-                  }
+        switch(number) {
+            case 1:
+                $("#1").text("1").animate({width: '15px'}, 750);
+                $("#2").text(vraag2).animate({width: (vraag2.length * 10)}, 750);
+                break;
+            case 2:
+                $("#2").text("2").animate({width: '15px'}, 750);
+                $("#3").text(vraag3).animate({width: (vraag3.length * 10)}, 750);
+                break;
+            case 3:
+                $("#3").text("3").animate({width: '15px'}, 750);
+                $("#4").text(vraag4).animate({width: (vraag4.length * 10)}, 750);
+                break;
         }
     }
     function flipcard(card) {
