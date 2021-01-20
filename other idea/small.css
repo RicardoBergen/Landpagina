@@ -1,0 +1,66 @@
+@import "https://fonts.googleapis.com/css?family=Josefin+Sans:400,700";
+.center {
+    margin-top: 10px;
+    align-self: flex-end;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+#q1 , #q2, #q3, #q4{
+    position: absolute;
+    left: 50%;
+    top: 38%;
+    transform: translateX(-50%);
+    margin-top: 10px;
+}
+button {
+    float: left;
+}
+/* Temp oplossing */
+.blob{
+    visibility: hidden;
+}
+.thisOne{
+    visibility: visible;
+    position: absolute;
+    left: 50%;
+    top: 25%;
+    transform: translateX(-50%);
+}
+main {
+    margin: 5%;
+    min-height: 69vh;
+    border-radius: 10px;
+    margin-bottom: 0px;
+    padding: 10px;
+    padding-top: 15px;
+    padding-bottom: 35px;
+    background-color: rgba(0, 0, 0, 0.178);
+    overflow: hidden;
+    white-space: nowrap;
+}
+.card-front {
+    border-radius: 20px;
+    height: 100%;
+    width: 100%;
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image:url();
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #000000;
+    backface-visibility: hidden;
+    transform: rotateY(0deg);
+    transition: .5s;
+}
+
+Dnd website:
+character sheet makkelijk aan maken
+links naar de andere sites
+zo veel mogenlijk automatisch invullen
