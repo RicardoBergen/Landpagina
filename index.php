@@ -21,31 +21,27 @@
     </header>
     <main>
         <div style="display: flex; justify-content: center;">
-            <p id="1" class="blob" style="width: 225px;">Ben je een man of vrouw?</p>
+            <p id="1" class="blob" style="width: 225px;">Deze website is alleen voor volwassenen. Ben je 18+?</p>
             <p id="2" class="blob" style="width: 15px;">2</p>
             <p id="3" class="blob" style="width: 15px;">3</p>
             <p id="4" class="blob" style="width: 15px;">4</p>
         </div>
         <div id="q1">
             <div class="center">
-                <button onclick='changeScreen("#q1", "#q2", 1)'>Man</button>
-                <button onclick='changeScreen("#q1", "#q2", 1)'>Vrouw</button>
+                <button onclick='changeScreen("#q1", "#q2", 1)'>Ja</button>
+                <button onclick='changeScreen("#q1", "#q2", 1)'>Nee</button>
             </div>
         </div>
         <div id="q2">
             <div class="center">
-                <button onclick='changeScreen("#q2", "#q3", 2)'>Grote</button>
-                <button onclick='changeScreen("#q2", "#q3", 2)'>Middel</button>
-                <button onclick='changeScreen("#q2", "#q3", 2)'>Kleine</button>
-                <button onclick='changeScreen("#q2", "#q3", 2)'>Maakt niet uit</button>
+                <button onclick='changeScreen("#q2", "#q3", 2)'>Ja</button>
+                <button onclick='changeScreen("#q2", "#q3", 2)'>Nee</button>
             </div>
         </div>
         <div id="q3">
             <div class="center">
-                <button onclick='changeScreen("#q3", "#q4", 3)'>1 - 5 keer per week</button>
-                <button onclick='changeScreen("#q3", "#q4", 3)'>5 - 10 keer per week</button>
-                <button onclick='changeScreen("#q3", "#q4", 3)'>Altijd</button>
-                <button onclick='changeScreen("#q3", "#q4", 3)'>Maakt niet uit</button>
+                <button onclick='changeScreen("#q3", "#q4", 3)'>Ja</button>
+                <button onclick='changeScreen("#q3", "#q4", 3)'>Nee</button>
             </div>
         </div>
         <div id="q4">
@@ -91,11 +87,11 @@
         switch(number) {
             case 1:
                 $("#1").text("1").animate({width: '15px'}, 750);
-                $("#2").text("Wat voor borsten wil je?").animate({width: '225px'}, 750);
+                $("#2").text("Wil je jongere vrouwen ontmoeten?").animate({width: '225px'}, 750);
                 break;
             case 2:
                 $("#2").text("2").animate({width: '15px'}, 750);
-                $("#3").text("Hoevaak wil je sex?").animate({width: '225px'}, 750);
+                $("#3").text("Ze zijn alleen op zoek naar snelle, vrijblijvende seks. Ga je hiermee akkoord?").animate({width: '225px'}, 750);
                 break;
             case 3:
                 $("#3").text("3").animate({width: '15px'}, 750);
