@@ -1,33 +1,11 @@
-@import "https://fonts.googleapis.com/css?family=Josefin+Sans:400,700";
-
 body {
     padding-bottom: 20px;
 }
-.center {
-    margin-top: 10px;
-    align-self: flex-end;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-left: auto;
-    margin-right: auto;
-    position: relative;
-}
-
 button {
     height: 80px;
     font-size: 18px;
     width: 180px;
     float: left;
-}
-/* Temp oplossing */
-.blob {
-    font-size: 9px;
-    margin-right: 2px;
-    margin-left: 2px;
-    margin-top: 0px;
-    padding: 12px;
 }
 main {
     margin: 5%;
@@ -36,6 +14,7 @@ main {
     padding: 10px;
     padding-top: 15px;
     padding-bottom: 35px;
+    white-space: unset;
 }
 .card {
     margin: 0px;

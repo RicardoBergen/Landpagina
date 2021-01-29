@@ -1,11 +1,11 @@
+<?php include 'settings.php';?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="landpagina.css">
-    <link rel="stylesheet" type="text/css" media="only screen and (max-device-width: 480px)" href="small.css" />
-    <?php include 'var.php';?>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" media="only screen and (max-device-width: 480px)" href="small.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <title>Snapchat Sex</title>
 </head>
@@ -22,42 +22,43 @@
     </header>
     <main>
         <div style="display: flex; justify-content: center;">
-            <p id="1" class="blob thisOne" style="width: auto;"><?php echo $vraag1; ?></p>
-            <p id="2" class="blob" style="width: 15px;">2</p>
-            <p id="3" class="blob" style="width: 15px;">3</p>
-            <p id="4" class="blob" style="width: 15px;">4</p>
+            <p id="1" class="blob current">1</p>
+            <p id="2" class="blob">2</p>
+            <p id="3" class="blob">3</p>
+            <p id="4" class="blob">4</p>
         </div>
         <div id="q1">
+            <h1 class="center"><?php echo $vraag1; ?></h1>
             <div class="center">
                 <?php
-                    foreach ($antworden1 as $antword) {
-                      $change = '"#q1", "#q2", 1';
-                      echo "<button onclick='changeScreen(". $change .")'>". $antword . "</button>";
+                    foreach ($antwoorden1 as $antwoord) {
+                        echo '<button onclick="next(1)">' . $antwoord . '</button>';
                     }
                 ?>
             </div>
         </div>
         <div id="q2">
+            <h1 class="center"><?php echo $vraag2; ?></h1>
             <div class="center">
                 <?php
-                    foreach ($antworden2 as $antword) {
-                      $change = '"#q2", "#q3", 2';
-                      echo "<button onclick='changeScreen(". $change .")'>". $antword . "</button>";
+                    foreach ($antwoorden2 as $antwoord) {
+                        echo '<button onclick="next(2)">' . $antwoord . '</button>';
                     }
                 ?>
             </div>
         </div>
         <div id="q3">
+            <h1 class="center"><?php echo $vraag3; ?></h1>
             <div class="center">
                 <?php
-                    foreach ($antworden3 as $antword) {
-                      $change = '"#q3", "#q4", 3';
-                      echo "<button onclick='changeScreen(". $change .")'>". $antword . "</button>";
+                    foreach ($antwoorden3 as $antwoord) {
+                        echo '<button onclick="next(3)">' . $antwoord . '</button>';
                     }
                 ?>
             </div>
         </div>
         <div id="q4">
+            <h1 class="center"><?php echo $vraag4; ?></h1>
             <div style="display: flex; justify-content: space-around; flex-wrap:wrap">
                 <div class="card" id="card1" onclick='flipcard("card1")'>
                     <div class="card-front"></div>
@@ -91,29 +92,14 @@
     </footer>
 </body>
 <script defer>
-    var vraag2 = "<?php echo $vraag2; ?>";
-    var vraag3 = "<?php echo $vraag3; ?>";
-    var vraag4 = "<?php echo $vraag4; ?>";
     $("#q2").hide(0);
     $("#q3").hide(0);
     $("#q4").hide(0);
-    function changeScreen(from, to, number) {
-        $(from).fadeOut(500);
-        $(to).delay(500).fadeIn(500);
-        switch(number) {
-            case 1:
-                $("#1").text("1").animate({width: '15px'}, 750);
-                $("#2").text(vraag2).animate({width: (vraag2.length * 10)}, 750);
-                break;
-            case 2:
-                $("#2").text("2").animate({width: '15px'}, 750);
-                $("#3").text(vraag3).animate({width: (vraag3.length * 10)}, 750);
-                break;
-            case 3:
-                $("#3").text("3").animate({width: '15px'}, 750);
-                $("#4").text(vraag4).animate({width: (vraag4.length * 10)}, 750);
-                break;
-        }
+    function next(number) {
+        $("#" + number).removeClass("current");
+        $("#" + (number + 1)).addClass("current");
+        $("#q" + number).fadeOut(500);
+        $("#q" + (number + 1)).delay(500).fadeIn(500);
     }
     function flipcard(card) {
         if (document.getElementById(card).classList.contains('cardClicked')) {
